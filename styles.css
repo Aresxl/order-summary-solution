@@ -1,0 +1,179 @@
+:root {
+  --clr-primary-100: hsl(225, 100%, 94%);
+  --clr-primary-400: hsl(245, 75%, 52%);
+  --clr-primary-700: hsl(245, 75%, 65%);
+
+  --clr-neutral-100: hsl(225, 100%, 98%);
+  --clr-neutral-400: hsl(224, 23%, 55%);
+  --clr-neutral-800: hsl(223, 47%, 23%);
+
+  --fw-regular: 500;
+  --fw-semi-bold: 700;
+  --fw-bold: 900;
+
+  --ff-base: "Red Hat Display", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* */
+
+body {
+  background-color: lightcoral;
+
+  display: grid;
+  place-content: center;
+  margin: 1.5rem;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+}
+
+.product {
+  max-width: 450px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.product-content {
+  display: grid;
+  gap: 20px;
+  padding: 30px;
+  background-color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "music annual link"
+    "music price link";
+  background-color: var(--clr-neutral-100);
+  border-radius: 10px;
+  padding: 15px;
+
+  align-items: center;
+  gap: 0px 20px;
+}
+
+.music-logo {
+  grid-area: music;
+}
+
+.annual-tag {
+  grid-area: annual;
+  font-weight: var(--fw-semi-bold);
+}
+
+.price-tag {
+  grid-area: price;
+  color: var(--clr-neutral-400);
+  font-weight: var(--fw-semi-bold);
+}
+
+.plan-link {
+  grid-area: link;
+  place-self: center;
+  font-weight: var(--fw-semi-bold);
+}
+
+.plan-link:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-primary-700);
+  font-weight: var(--fw-semi-bold);
+}
+
+.payment-btn {
+  border: 0px;
+  border-radius: 10px;
+  color: white;
+  padding: 12px 30px;
+  background-color: var(--clr-primary-400);
+  font-weight: var(--fw-bold);
+}
+
+.payment-btn:hover {
+  cursor: pointer;
+  background-color: var(--clr-primary-700);
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  border: 0px;
+  border-radius: 10px;
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-neutral-100);
+}
+
+.cancel-btn:hover {
+  cursor: pointer;
+  color: var(--clr-neutral-800);
+}
+
+h1 {
+  text-align: center;
+  font-weight: var(--fw-bold);
+}
+
+.info {
+  text-align: center;
+  color: var(--clr-neutral-400);
+}
